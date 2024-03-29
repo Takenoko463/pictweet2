@@ -32,6 +32,11 @@ class TweetsController < ApplicationController
     redirect_to root_path
   end
 
+  #ツイートの詳細pageを表示
+  def show
+    @tweet = Tweet.find(params[:id])
+  end
+
   private
 
   def tweet_params
