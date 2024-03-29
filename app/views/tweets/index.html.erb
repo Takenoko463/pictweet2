@@ -5,7 +5,7 @@
         <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">
           <li>
-            <%= link_to '削除', "/tweets/#{tweet.id}", data: { turbo_method: :delete } %>
+            <%= link_to '削除', tweet_path(tweet.id), data: { turbo_method: :delete } %>
           </li>
         </ul>
       </div>
