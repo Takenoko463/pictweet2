@@ -7,4 +7,10 @@ class TweetsController < ApplicationController
   def new
     @tweet = Tweet.new
   end
+
+  #ツイートをデータベースに保存し、ルートパスへ戻す
+  def create
+    Tweet.create(tweet_params)
+    redirect_to root_path
+  end
 end
