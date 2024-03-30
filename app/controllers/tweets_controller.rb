@@ -36,6 +36,8 @@ class TweetsController < ApplicationController
 
   #ツイートの詳細pageを表示
   def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   private
